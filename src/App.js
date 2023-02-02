@@ -1,7 +1,7 @@
 import './App.css';
 import { useState ,useEffect} from 'react';
 import axios from 'axios';
-import  { Formik, Field, Form } from 'formik';
+import  { Formik, Field, Form , ErrorMessage} from 'formik';
 import * as Yup from "yup";
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
  },[])
 
 const [num,setNum]=useState({
-  userId: '',
+    userId: '',
     id: '',
     title: '',
     body: '',
@@ -82,7 +82,7 @@ const New = Yup.object().shape({
       }
       resetForm()
       setNum({
-          userid: '',
+          userId: '',
           id: '',
           title: '',
           body: '',
@@ -93,16 +93,22 @@ const New = Yup.object().shape({
       <Form>
         <label htmlFor="userId">user Id</label>
         <Field id="userId" name="userId" placeholder="USER ID" type="number"/>
-        
+        <ErrorMessage name="userID" type="number" />        
 
         <label htmlFor="id">Id</label>
         <Field id="id" name="id" placeholder="ID" type="number"/>
+        <ErrorMessage name="id" />        
+
 
         <label htmlFor="title">title</label>
         <Field id="title" name="title"placeholder="TITLE"type="text"/>
+        <ErrorMessage name="title" />        
+
 
         <label htmlFor="body">body</label>
         <Field id="body" name="body"placeholder="BODY"type="text"/>
+        <ErrorMessage name="body" />        
+
 
         
 
