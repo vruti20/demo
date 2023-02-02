@@ -91,26 +91,23 @@ const New = Yup.object().shape({
       }}
     >
       <Form>
-        <label htmlFor="userId">user Id</label>
+        <label htmlFor="userId">userId</label>
         <Field id="userId" name="userId" placeholder="USER ID" type="number"/>
-        <ErrorMessage name="userID" type="number" />        
+        <ErrorMessage name="userId" />        <br></br>
 
         <label htmlFor="id">Id</label>
         <Field id="id" name="id" placeholder="ID" type="number"/>
-        <ErrorMessage name="id" />        
+        <ErrorMessage name="id" />      <br></br>  
 
 
         <label htmlFor="title">title</label>
         <Field id="title" name="title"placeholder="TITLE"type="text"/>
-        <ErrorMessage name="title" />        
+        <ErrorMessage name="title" />      <br></br>  
 
 
         <label htmlFor="body">body</label>
         <Field id="body" name="body"placeholder="BODY"type="text"/>
-        <ErrorMessage name="body" />        
-
-
-        
+        <ErrorMessage name="body" />      <br></br>  
 
         <button type="submit">Submit</button>
       </Form>
